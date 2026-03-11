@@ -1,0 +1,33 @@
+# Legal Drafting AI - Production Dependencies
+# Python 3.10+ recommended
+
+# API & Server
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# LLM & Inference
+transformers>=4.36.0
+accelerate>=0.25.0
+torch>=2.1.0
+
+# Fine-Tuning (PEFT / LoRA)
+peft>=0.7.0
+datasets>=2.16.0
+bitsandbytes>=0.41.0
+
+# Vector Store & Embeddings
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.0
+# Postgres + pgvector (shared DB; use when LEGAL_AI_USE_PGVECTOR=1)
+psycopg[binary]>=3.1.0
+pgvector>=0.2.0
+
+# Utilities
+numpy>=1.24.0
+python-multipart>=0.0.6
+httpx>=0.26.0
+
+# Optional: Instructor embeddings (uncomment if using instructor-xl)
+# instructor-embedding>=1.0.0
